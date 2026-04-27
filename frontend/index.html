@@ -1,0 +1,38 @@
+﻿<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>AI Orchestrator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🤖 Гибридный AI-оркестратор</h1>
+    <div id="login-section">
+      <input type="password" id="token-input" placeholder="Введите JWT токен">
+      <button id="login-btn">Войти</button>
+    </div>
+    <div id="app-section" style="display:none">
+      <textarea id="prompt" placeholder="Введите запрос..."></textarea>
+      <div>
+        <!-- <label><input type="checkbox" id="stream-mode"> Потоковый вывод</label> -->
+      </div>
+      <button id="send-btn">Отправить</button>
+      <div id="status"></div>
+      <div id="results">
+        <div class="primary-card">
+          <h3>Основной ответ <span id="primary-model"></span></h3>
+          <div id="primary-content"></div>
+        </div>
+        <div class="alternatives">
+          <h3>Альтернативы</h3>
+          <div id="alt-list"></div>
+        </div>
+        <div id="metadata"></div>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
